@@ -1,0 +1,42 @@
+site_name: Java Developer Reference
+site_description: A comprehensive, structured, and searchable personal knowledge base for Java.
+repo_url: https://github.com/YourUsername/Java-Reference-Notes # <-- IMPORTANT: Replace with your GitHub URL!
+
+# Theme Configuration (using the popular Material for MkDocs)
+theme:
+  name: material
+  palette:
+    scheme: slate # Or 'default' for light mode
+    primary: indigo
+    accent: teal
+  features:
+    - navigation.sections # Groups items into collapsible sections
+    - search.suggest
+    - search.highlight
+    - content.code.copy # Adds a 'copy' button to code blocks
+    - content.code.annotate # Allows inline annotation of code
+    
+# Extensions for better Markdown support
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets # Allows embedding of code snippets from other files
+  - admonition # Allows for stylish tip/note/warning boxes
+  - meta
+  - toc:
+      permalink: true
+
+# The explicit navigation structure (required for a good sidebar)
+nav:
+  - Home: 'index.md'
+  - 📚 Core Java Fundamentals:
+      - 🔹 LEVEL 1 JAVA FUNDAMENTALS:
+        - Introduction to Java: 'java/level-1-fundamentals/1-introduction.md'
+        - JVM Internals (Basic): 'java/level-1-fundamentals/2-jvm-basics.md'
+        - Data Types & Variables: 'java/level-1-fundamentals/3-data-types.md'
+        - Operators: 'java/level-1-fundamentals/4-operators.md'
+        - Control Flow Statements: 'java/level-1-fundamentals/5-control-flow.md'
+        - Arrays: 'java/level-1-fundamentals/6-arrays.md'
+        - Strings: 'java/level-1-fundamentals/7-strings.md'
